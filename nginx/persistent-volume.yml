@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv
+  namespace: nginx  
+  labels:
+    app: local
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:                # <-- Should be "accessModes", not "accessMode"
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  hostPath:
+    path: /mnt/data
+

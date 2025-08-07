@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service        # ✅ Use a valid name (no colon)
+  namespace: nginx           # ✅ Make sure this namespace exists
+spec:
+  selector:
+    app: nginx               # ✅ This should match the pod's label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP            # ✅ Correct casing
+ 
