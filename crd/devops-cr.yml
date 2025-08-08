@@ -1,0 +1,9 @@
+kind: DevopsBatch
+apiVersion: trainwithnetra.com/v1
+metadata:
+  name: netra-batch
+spec:
+  name: Devops-zero To hero
+  duration : 3 months
+  platform: trainwithnetra.com
+  mode: live  
